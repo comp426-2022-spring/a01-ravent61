@@ -34,7 +34,7 @@ const port = process.env.PORT || 3000
 fs.readFile('www/index.html', 'utf8', (err, data) => {
     if (err) {
         console.error(err)
-        return 
+        return 1
     }
     console.log(data)
 })
