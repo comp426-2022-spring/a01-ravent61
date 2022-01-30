@@ -31,7 +31,7 @@ const port = process.env.PORT || 3000
 // If there is an error, put it on the console error, return, and exit with error code 1. 
 // Do not be nice about exiting.
 
-fs.readFile('/Users/raventaylor/COMP 426/a01-ravent61/www/index.html', 'utf8', (err, data) => {
+fs.readFile('www/index.html', 'utf8', (err, data) => {
     if (err) {
         console.error(err)
         return 
