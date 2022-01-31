@@ -31,7 +31,7 @@ const port = args['port'] || 3000
 // If there is an error, put it on the console error, return, and exit with error code 1. 
 // Do not be nice about exiting.
 
-data1: str = "" 
+var data1 = "" 
 
 fs.readFile('www/index.html', 'utf8', (err, data) => {
     if (err) {
