@@ -36,7 +36,7 @@ fs.readFile('www/index.html', 'utf8', (err, data) => {
         console.error(err)
         return 1
     }
-    console.log(data)
+    //console.log(data)
 })
 
 
