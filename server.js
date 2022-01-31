@@ -16,10 +16,10 @@ const fs = require('fs')
 // Define a const `port` using the argument from the command line. 
 // Make this const default to port 3000 if there is no argument given for `--port`.
 
-//const args = require('minimist')(process.argv.slice(2))
-//const port = args['port'] || 3000
+const args = require('minimist')(process.argv.slice(2))
+const port = args['port'] || 3000
 
-const port = process.env.PORT || 3000
+//const port = process.env.PORT || 3000
 
 
 
