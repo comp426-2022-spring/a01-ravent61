@@ -45,7 +45,6 @@ fs.readFile('./www/index.html', 'utf8', (err, data) => {
 })
 
 if (should_exit) {
-    return
     process.exit(1)
     return
 }
