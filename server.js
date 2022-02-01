@@ -38,9 +38,10 @@ fs.readFile('./www/index.html', 'utf8', (err, data) => {
         console.error(err) 
         return
         process.exit(1)
-    }
+    }else{
     //console.log(data)
-    data1 = data
+        data1 = data
+    }
 })
 
 
