@@ -37,7 +37,7 @@ var should_exit = false
 fs.readFile('./www/index.html', 'utf8', (err, data) => {
     if (err) {
         console.error(err) 
-        should_exit = True
+        should_exit = true
     }else{
     //console.log(data)
         data1 = data
