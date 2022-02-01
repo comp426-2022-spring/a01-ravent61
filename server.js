@@ -32,18 +32,23 @@ const port = args['port'] || 3000
 // Do not be nice about exiting.
 
 var data1 = "" 
+var should_exit = False
 
 fs.readFile('./www/index.html', 'utf8', (err, data) => {
     if (err) {
         console.error(err) 
-        return
-        process.exit(1)
+        should_exit = True
     }else{
     //console.log(data)
         data1 = data
     }
 })
 
+if (should_exit) {
+    return
+    process.exit(1)
+    return
+}
 
 
 
