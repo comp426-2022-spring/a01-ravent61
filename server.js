@@ -37,16 +37,15 @@ var should_exit = false
 fs.readFile('./www/index.html', 'utf8', (err, data) => {
     if (err) {
         console.error(err) 
-        should_exit = true
+        return
+        porocess.exit(1)
     }else{
     //console.log(data)
         data1 = data
     }
 })
 
-if (should_exit) {
-    return
-}
+
 
 
 
