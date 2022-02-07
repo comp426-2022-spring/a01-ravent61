@@ -38,10 +38,9 @@ fs.readFile('./www/index.html', 'utf8', (err, data) => {
     if (err) {
         console.error(err) 
         return
-    }else{
-    //console.log(data)
-        data1 = data
     }
+        data1 = data
+    
 })
 
 
@@ -74,3 +73,4 @@ server.listen(port, () => {
 
 
 // That's it! You're all done!
+process.exit(1)
