@@ -37,12 +37,16 @@ var should_exit = false
 fs.readFile('./www/index.html', 'utf8', (err, data) => {
     if (err) {
         console.error(err) 
+        should_exit = true
         return
     }
         data1 = data
     
 })
 
+if (should_exit) {
+    process.exit(1)
+}
 
 
 
