@@ -37,11 +37,19 @@ var should_exit = false
 fs.readFile('./www/index.html', 'utf8', (err, data) => {
     if (err) {
         console.error(err) 
-        should_exit = true
         return
     }
-        data1 = data
     
+    const server = http.createServer((req, res) => {
+        res.statusCode = 200
+        res.setHeader('Content-Type', 'text/html')
+        res.end(data1)
+    })
+    
+    server.listen(port, () => {
+        console.log(`Server listening on port ${port}`)
+    })
+
 })
 
 
@@ -55,13 +63,6 @@ fs.readFile('./www/index.html', 'utf8', (err, data) => {
 // 2. set a header with content type `text/html`, and 
 // 3. end with the data that you are reading in from ./www/index.html.
 
-const server = http.createServer((req, res) => {
-    res.statusCode = 200
-    res.setHeader('Content-Type', 'text/html')
-    res.end(data1)
-})
-
-
 
 
 
@@ -74,6 +75,3 @@ server.listen(port, () => {
 
 
 // That's it! You're all done!
-if (should_exit) {
-    process.exit(1)
-}
