@@ -44,9 +44,6 @@ fs.readFile('./www/index.html', 'utf8', (err, data) => {
     
 })
 
-if (should_exit) {
-    process.exit(1)
-}
 
 
 
@@ -77,4 +74,6 @@ server.listen(port, () => {
 
 
 // That's it! You're all done!
-process.exit(1)
+if (should_exit) {
+    process.exit(1)
+}
