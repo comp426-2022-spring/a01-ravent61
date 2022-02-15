@@ -32,7 +32,7 @@ const port = args['port'] || 3000
 // Do not be nice about exiting.
 
 var data1 = "" 
-var should_exit = false
+var should_exit = false 
 
 fs.readFile('./www/index.html', 'utf8', (err, data) => {
     if (err) {
