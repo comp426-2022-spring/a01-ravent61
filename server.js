@@ -31,8 +31,7 @@ const port = args['port'] || 3000
 // If there is an error, put it on the console error, return, and exit with error code 1. 
 // Do not be nice about exiting.
 
-var data1 = "" 
-var should_exit = false 
+
 
 fs.readFile('./www/index.html', 'utf8', (err, data) => {
     if (err) {
@@ -43,7 +42,7 @@ fs.readFile('./www/index.html', 'utf8', (err, data) => {
     const server = http.createServer((req, res) => {
         res.statusCode = 200
         res.setHeader('Content-Type', 'text/html')
-        res.end(data1)
+        res.end(data)
     })
     
     server.listen(port, () => {
